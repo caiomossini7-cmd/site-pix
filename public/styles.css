@@ -216,3 +216,10 @@ input:focus{ border-color: var(--gold); box-shadow: 0 0 0 3px rgba(201,134,27,.1
   .header__row{ flex-wrap:wrap; }
   .status-pill{ order:3; width:100%; }
 }
+/* Corrige bug: modal e carrinho ficavam sempre visiveis e bloqueando a tela,
+   porque "display:flex" das classes .modal/.drawer vencia o atributo
+   "hidden". Estas regras, por serem mais especificas, corrigem isso. */
+.modal[hidden],
+.drawer[hidden]{
+  display: none;
+}

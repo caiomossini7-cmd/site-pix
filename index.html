@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Panela de Barro — Comida caseira, pago no PIX</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ===================== HEADER ===================== -->
+<header class="header">
+  <div class="wrap header__row">
+    <div class="logo">
+      <svg width="34" height="34" viewBox="0 0 34 34" fill="none" aria-hidden="true">
+        <path d="M6 15c0-1 .8-1.8 1.8-1.8h18.4c1 0 1.8.8 1.8 1.8v2.2c0 6.5-5 11.8-11 11.8S6 23.7 6 17.2V15z" fill="var(--gold)"/>
+        <ellipse cx="17" cy="14.6" rx="11.6" ry="2.6" fill="var(--ink)"/>
+        <path d="M11 8c.5-2 2.2-3.4 3-2.6-1 1.4-.8 2.6-.2 3.4M20 7.4c.4-2 2-3.6 2.9-2.9-.9 1.5-.6 2.8 0 3.6" stroke="var(--ink)" stroke-width="1.4" stroke-linecap="round"/>
+      </svg>
+      <span>Panela de Barro</span>
+    </div>
+    <nav class="nav">
+      <a href="#cardapio">Cardápio</a>
+      <a href="#como-funciona">Como funciona</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <div class="status-pill"><span class="dot"></span> Aberto agora · entrega até 21h</div>
+  </div>
+</header>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero">
+  <div class="wrap hero__row">
+    <div class="hero__text">
+      <p class="eyebrow">marmitas artesanais &middot; feitas todo dia</p>
+      <h1>Comida de panela,<br>direto pro seu <span>PIX</span>.</h1>
+      <p class="hero__lead">Escolha o prato, pague no PIX e pronto — a confirmação
+        é automática, sem precisar mandar comprovante no WhatsApp.</p>
+      <a href="#cardapio" class="btn btn--gold">Ver cardápio de hoje</a>
+    </div>
+    <div class="hero__art" aria-hidden="true">
+      <svg viewBox="0 0 320 320" class="pot-illustration">
+        <g class="steam">
+          <path class="steam-line s1" d="M120 90 C 110 70, 130 60, 120 40" />
+          <path class="steam-line s2" d="M160 90 C 150 65, 172 55, 160 30" />
+          <path class="steam-line s3" d="M200 90 C 190 70, 210 60, 200 40" />
+        </g>
+        <ellipse cx="160" cy="140" rx="108" ry="20" fill="var(--brick)"/>
+        <path d="M56 140c0-9 7-16 16-16h176c9 0 16 7 16 16v20c0 58-45 105-104 105S56 218 56 160v-20z" fill="var(--gold)"/>
+        <path d="M56 150c0 60 46.6 109 104 109s104-49 104-109" stroke="var(--ink)" stroke-width="3" fill="none" opacity=".15"/>
+        <rect x="30" y="128" width="34" height="14" rx="7" fill="var(--brick)"/>
+        <rect x="256" y="128" width="34" height="14" rx="7" fill="var(--brick)"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CARDÁPIO ===================== -->
+<section class="menu" id="cardapio">
+  <div class="wrap">
+    <h2>Cardápio de hoje</h2>
+    <p class="section-lead">Tudo feito na hora. As quantidades são limitadas — chegou, pode pedir.</p>
+    <div id="menu-grid" class="menu-grid"><!-- itens injetados via JS --></div>
+  </div>
+</section>
+
+<!-- ===================== COMO FUNCIONA ===================== -->
+<section class="how" id="como-funciona">
+  <div class="wrap how__row">
+    <div class="how__step">
+      <span class="how__num">01</span>
+      <h3>Monte seu pedido</h3>
+      <p>Escolha os pratos e a quantidade no cardápio acima.</p>
+    </div>
+    <div class="how__step">
+      <span class="how__num">02</span>
+      <h3>Pague no PIX</h3>
+      <p>Escaneie o QR Code ou copie o código — leva menos de 30 segundos.</p>
+    </div>
+    <div class="how__step">
+      <span class="how__num">03</span>
+      <h3>Confirmação automática</h3>
+      <p>Assim que o PIX cai, seu pedido já entra na cozinha. Sem espera, sem comprovante.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer" id="contato">
+  <div class="wrap footer__row">
+    <div>
+      <div class="logo logo--light"><span>Panela de Barro</span></div>
+      <p>Rua das Hortências, 128 — Vila Mariana, São Paulo</p>
+    </div>
+    <div>
+      <p>Pedidos: (11) 99999-0000</p>
+      <p>contato@paneladebarro.com.br</p>
+    </div>
+    <div class="ticket-tag">pago com <strong>PIX</strong></div>
+  </div>
+</footer>
+
+<!-- ===================== CARRINHO (flutuante) ===================== -->
+<button id="cart-fab" class="cart-fab" aria-label="Abrir carrinho">
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 3h2l2.4 12.4a2 2 0 0 0 2 1.6h8.6a2 2 0 0 0 2-1.6L22 8H6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="21" r="1.4" fill="currentColor"/><circle cx="18" cy="21" r="1.4" fill="currentColor"/></svg>
+  <span id="cart-count">0</span>
+</button>
+
+<div id="cart-drawer" class="drawer" hidden>
+  <div class="drawer__panel">
+    <div class="drawer__head">
+      <h3>Seu pedido</h3>
+      <button id="cart-close" class="icon-btn" aria-label="Fechar carrinho">✕</button>
+    </div>
+    <div id="cart-items" class="drawer__items"><!-- itens do carrinho --></div>
+    <div class="drawer__total">
+      <span>Total</span>
+      <strong id="cart-total">R$ 0,00</strong>
+    </div>
+    <button id="cart-checkout" class="btn btn--gold btn--block" disabled>Finalizar pedido</button>
+  </div>
+</div>
+
+<!-- ===================== MODAL CHECKOUT ===================== -->
+<div id="checkout-modal" class="modal" hidden>
+  <div class="modal__box">
+    <button class="icon-btn modal__close" data-close>✕</button>
+    <h3>Seus dados para o PIX</h3>
+    <p class="modal__lead">O Mercado Pago usa esses dados só para emitir a cobrança.</p>
+    <form id="checkout-form">
+      <label>Nome completo
+        <input type="text" name="nome" required placeholder="Maria da Silva">
+      </label>
+      <label>E-mail
+        <input type="email" name="email" required placeholder="maria@email.com">
+      </label>
+      <label>CPF
+        <input type="text" name="cpf" required placeholder="000.000.000-00" inputmode="numeric">
+      </label>
+      <label>Endereço de entrega
+        <input type="text" name="endereco" required placeholder="Rua, número, bairro">
+      </label>
+      <div id="checkout-error" class="form-error" hidden></div>
+      <button type="submit" class="btn btn--gold btn--block">Gerar PIX para pagar</button>
+    </form>
+  </div>
+</div>
+
+<!-- ===================== MODAL PAGAMENTO (comanda) ===================== -->
+<div id="pix-modal" class="modal" hidden>
+  <div class="modal__box modal__box--ticket">
+    <button class="icon-btn modal__close" data-close>✕</button>
+
+    <div id="pix-pending" class="ticket">
+      <p class="ticket__label">comanda</p>
+      <h3>Pague com PIX</h3>
+      <p class="ticket__total" id="pix-total">R$ 0,00</p>
+      <img id="pix-qr" class="ticket__qr" alt="QR Code do PIX" />
+      <p class="ticket__hint">Abra o app do seu banco → Pix → Ler QR Code</p>
+      <div class="ticket__divider">ou copie o código</div>
+      <div class="copy-row">
+        <input id="pix-copiacola" type="text" readonly>
+        <button id="pix-copy" class="btn btn--outline">Copiar</button>
+      </div>
+      <p class="ticket__status"><span class="pulse"></span> Aguardando pagamento…</p>
+    </div>
+
+    <div id="pix-success" class="ticket" hidden>
+      <div class="ticket__check">✓</div>
+      <h3>Pedido confirmado!</h3>
+      <p class="ticket__hint">Seu PIX caiu certinho — já mandamos pra cozinha.</p>
+      <p class="ticket__order-id">Pedido <strong id="pix-order-id"></strong></p>
+      <button class="btn btn--gold" data-close>Fechar</button>
+    </div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

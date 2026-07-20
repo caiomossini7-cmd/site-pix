@@ -1,0 +1,44 @@
+[
+  {
+    "id": "feijoada",
+    "nome": "Feijoada da Vó",
+    "descricao": "Feijão preto, linguiça, costelinha e couve refogada. Vem com arroz e farofa.",
+    "preco": 34.9,
+    "icone": "pote"
+  },
+  {
+    "id": "frango-caipira",
+    "nome": "Frango Caipira ao Molho Pardo",
+    "descricao": "Frango cozido lentamente, arroz soltinho e batata corada.",
+    "preco": 28.5,
+    "icone": "prato"
+  },
+  {
+    "id": "carne-panela",
+    "nome": "Carne de Panela",
+    "descricao": "Acém desfiando de macio, purê de mandioquinha e legumes salteados.",
+    "preco": 32.0,
+    "icone": "panela"
+  },
+  {
+    "id": "estrogonofe",
+    "nome": "Estrogonofe de Frango",
+    "descricao": "Cremoso, com batata palha crocante e arroz branco.",
+    "preco": 27.9,
+    "icone": "prato"
+  },
+  {
+    "id": "marmita-veg",
+    "nome": "Marmita Vegetariana",
+    "descricao": "Grão-de-bico ao curry, arroz integral e legumes da estação.",
+    "preco": 24.9,
+    "icone": "folha"
+  },
+  {
+    "id": "sobremesa",
+    "nome": "Doce de Leite com Queijo",
+    "descricao": "Sobremesa caseira, pote individual.",
+    "preco": 9.9,
+    "icone": "pote"
+  }
+]

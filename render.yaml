@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: panela-de-barro
+    runtime: node
+    plan: free
+    buildCommand: "echo 'sem dependencias para instalar'"
+    startCommand: "node server.js"
+    envVars:
+      - key: MP_ACCESS_TOKEN
+        sync: false   # você preenche isso manualmente no painel do Render (nunca no código)
+      - key: PUBLIC_URL
+        sync: false   # depois do primeiro deploy, cole aqui a URL que o Render gerou (ex: https://panela-de-barro.onrender.com)
+      - key: PORT
+        value: 10000  # o Render injeta a porta automaticamente, mas deixamos um padrão
